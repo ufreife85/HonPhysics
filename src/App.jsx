@@ -2,7 +2,10 @@ import React, { useState } from "react";
 
 // --- Data for the Units (Updated) ---
 const units = [
-  { id: 1, title: "Unit 1 — The Science of Physics", items: [] },
+  { id: 1, title: "Unit 1 — The Science of Physics", items: [
+    {name: "1.1 and 1.2 Intro to Physics", href: "./units/1_1_2intro/index.html"},
+    {name: "1.3 Measurement", href: "./units/1_3measurement/index.html", password: "physics"},
+  ] },
   { id: 2, title: "Unit 2 — Motion in One Dimension", items: [] },
   { id: 3, title: "Unit 3 — Forces & Newton's Laws of Motion", items: [] },
   { id: 4, title: "Unit 4 — Motion in Two Dimensions", items: [] },
