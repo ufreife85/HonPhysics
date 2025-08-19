@@ -132,11 +132,26 @@ export default function Portal() {
             <h2 className="text-xl font-semibold">Files & Links</h2>
           
           </div>
-          <div className="space-x-2 mt-3 text-zinc-300 text-sm max-w-prose">
+          <div className="space-x-2 mt-3 pb-4 text-zinc-300 text-sm max-w-prose">
           <a href="./documents/PhysicsHonors_Syllabus2025-2026.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Syllabus</a>
           <a href="https://flexbooks.ck12.org/cbook/ck-12-physics-flexbook-2.0/" target="_blank"className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">CK-12</a>
-          <a href="./documents/Physics_Unit1_Guided_Notes.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Unit 1 Guided Notes</a>
+          
           </div>
+                  {/* Equation Sheet */}
+        <section id="equations" className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/60">
+          <h2 className="text-xl font-semibold">Equation Sheet</h2>
+          <p className="mt-2 text-sm text-zinc-300 max-w-prose">
+          <a href="./documents/EquationSheet.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Equation Sheet</a>
+          </p>
+        </section>
+        <div><br /></div>
+                          {/* Equation Sheet */}
+          <section id="equations" className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/60">
+          <h2 className="text-xl font-semibold">Guided Notes</h2>
+          <p className="mt-2 text-sm text-zinc-300 max-w-prose">
+          <a href="./documents/Physics_Unit1_Guided_Notes.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Unit 1 Guided Notes</a>
+          </p>
+        </section>
         </section>
 
         {/* Lab Safety */}
@@ -150,13 +165,7 @@ export default function Portal() {
           </ul>
         </section>
 
-        {/* Equation Sheet */}
-        <section id="equations" className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/60">
-          <h2 className="text-xl font-semibold">Equation Sheet</h2>
-          <p className="mt-2 text-sm text-zinc-300 max-w-prose">
-          <a href="./documents/EquationSheet.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Equation Sheet</a>
-          </p>
-        </section>
+
 
         {/* Units */}
         <section id="units" className="grid gap-4">
