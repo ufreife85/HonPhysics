@@ -6,6 +6,7 @@ const units = [
     {name: "1.1 and 1.2 Intro to Physics", href: "./units/1_1_2intro/index.html"},
     {name: "1.3 Measurement", href: "./units/1_3measurement/index.html", password: "physics"},
     { name: "1.4 Math Tools", href: "./units/1_4mathTools/index.html", password: "physics"},
+    { name: "1.5 Vectors", href: "./units/1_5vectors.index.html", password: "physics"},
   ] },
   { id: 2, title: "Unit 2 — Motion in One Dimension", items: [] },
   { id: 3, title: "Unit 3 — Forces & Newton's Laws of Motion", items: [] },
