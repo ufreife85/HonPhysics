@@ -153,7 +153,7 @@ export default function Portal() {
         <section id="equations" className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/60">
           <h2 className="text-xl font-semibold">Equation Sheet</h2>
           <p className="mt-2 text-sm text-zinc-300 max-w-prose">
-          <a href="./documents/PhysicsHonors_Syllabus2025-2026.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Equation Sheet</a>
+          <a href="./documents/EqationSheet.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Equation Sheet</a>
           </p>
         </section>
 
