@@ -7,6 +7,7 @@ const units = [
     {name: "1.3 Measurement", href: "./units/1_3measurement/index.html", password: "physics"},
     { name: "1.4 Math Tools", href: "./units/1_4mathTools/index.html", password: "physics"},
     { name: "1.5 Vectors", href: "./units/1_5vectors.index.html", password: "physics"},
+    { name: "1.6 & 1.7 Vector Addition", href: "./units/1_6_7vectorAddition/index.html", password: "physics"},
   ] },
   { id: 2, title: "Unit 2 — Motion in One Dimension", items: [] },
   { id: 3, title: "Unit 3 — Forces & Newton's Laws of Motion", items: [] },
@@ -128,11 +129,12 @@ export default function Portal() {
         {/* Syllabus */}
         <section id="syllabus" className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/60">
           <div className="flex items-center justify-between">
-            <h2 className="text-xl font-semibold">Syllabus</h2>
-            <span className="text-xs text-zinc-400">(Placeholder)</span>
+            <h2 className="text-xl font-semibold">Files & Links</h2>
+          
           </div>
-          <div className="mt-3 text-zinc-300 text-sm max-w-prose">
-            Upload a PDF or link when ready. This section will explain grading, expectations, and pacing.
+          <div className="space-x-2 mt-3 text-zinc-300 text-sm max-w-prose">
+          <a href="./documents/PhysicsHonors_Syllabus2025-2026.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Syllabus</a>
+          <a href="https://flexbooks.ck12.org/cbook/ck-12-physics-flexbook-2.0/" target="_blank"className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">CK-12</a>
           </div>
         </section>
 
