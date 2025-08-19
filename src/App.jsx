@@ -135,6 +135,7 @@ export default function Portal() {
           <div className="space-x-2 mt-3 text-zinc-300 text-sm max-w-prose">
           <a href="./documents/PhysicsHonors_Syllabus2025-2026.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Syllabus</a>
           <a href="https://flexbooks.ck12.org/cbook/ck-12-physics-flexbook-2.0/" target="_blank"className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">CK-12</a>
+          <a href="./documents/Physics_Unit1_Guided_Notes.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Unit 1 Guided Notes</a>
           </div>
         </section>
 
