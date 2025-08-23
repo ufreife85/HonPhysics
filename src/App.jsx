@@ -4,10 +4,10 @@ import React, { useState } from "react";
 const units = [
   { id: 1, title: "Unit 1 — The Science of Physics", items: [
     {name: "1.1 and 1.2 Intro to Physics", href: "./units/1_1_2intro/index.html"},
-    {name: "1.3 Measurement", href: "./units/1_3measurement/index.html", password: "physics"},
-    { name: "1.4 Math Tools", href: "./units/1_4mathTools/index.html", password: "physics"},
-    { name: "1.5 Vectors", href: "./units/1_5vectors.index.html", password: "physics"},
-    { name: "1.6 & 1.7 Vector Addition", href: "./units/1_6_7vectorAddition/index.html", password: "physics"},
+    {name: "1.3 Measurement", href: "./units/1_3measurement/index.html", password: "phys13"},
+    { name: "1.4 Math Tools", href: "./units/1_4mathTools/index.html", password: "phys14"},
+    { name: "1.5 Vectors", href: "./units/1_5vectors.index.html", password: "phys15"},
+    { name: "1.6 & 1.7 Vector Addition", href: "./units/1_6_7vectorAddition/index.html", password: "phys16"},
   ] },
   { id: 2, title: "Unit 2 — Motion in One Dimension", items: [] },
   { id: 3, title: "Unit 3 — Forces & Newton's Laws of Motion", items: [] },
