@@ -146,7 +146,7 @@ export default function Portal() {
         </section>
         <div><br /></div>
                           {/* Equation Sheet */}
-          <section id="equations" className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/60" password="gn1">
+          <section id="equations" className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/60">
           <h2 className="text-xl font-semibold">Guided Notes</h2>
           <p className="mt-2 text-sm text-zinc-300 max-w-prose">
           <a href="./documents/Physics_Unit1_Guided_Notes.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Unit 1 Guided Notes</a>
