@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import PasswordModal from './Password.jsx';
 
 // --- Data for the Units (Updated) ---
 const units = [
   { id: 1, title: "Unit 1 — The Science of Physics", items: [
-    {name: "1.1 and 1.2 Intro to Physics", href: "./units/1_1_2intro/index.html"},
-    {name: "1.3 Measurement", href: "./units/1_3measurement/index.html", password: "phys13"},
-    { name: "1.4 Math Tools", href: "./units/1_4mathTools/index.html", password: "phys14"},
-    { name: "1.5 Vectors", href: "./units/1_5vectors/index.html", password: "phys15"},
-    { name: "1.6 & 1.7 Vector Addition", href: "./units/1_6_7vectorAddition/index.html", password: "phys1617"},
+    {name: "1.1 and 1.2 Intro to Physics", href: "./units/1_1_2intro/index.html", notes: { name: "1.1 & 1.2 Guided Notes", href: "./documents/GuidedNotes/1_1_1_2GuidedNotes.pdf", password: "notes1112" }},
+    {name: "1.3 Measurement", href: "./units/1_3measurement/index.html", password: "phys13", notes: { name: "1.3 Guided Notes", href: "./documents/GuidedNotes/1_3GuidedNotes.pdf", password: "notes13" }},
+    { name: "1.4 Math Tools", href: "./units/1_4mathTools/index.html", password: "phys14", notes: { name: "1.4 Guided Notes", href: "./documents/GuidedNotes/1_4GuidedNotes.pdf", password: "notes14" }},
+    { name: "1.5 Vectors", href: "./units/1_5vectors/index.html", password: "phys15", notes: { name: "1.5 Guided Notes", href: "./documents/GuidedNotes/1_5GuidedNotes.pdf", password: "notes15" }},
+    { name: "1.6 & 1.7 Vector Addition", href: "./units/1_6_7vectorAddition/index.html", password: "phys1617", notes: { name: "1.6 & 1.7 Guided Notes", href: "./documents/GuidedNotes/1_6_1_7GuidedNotes.pdf", password: "notes1617" }},
   ] },
   { id: 2, title: "Unit 2 — Motion in One Dimension", items: [] },
   { id: 3, title: "Unit 3 — Forces & Newton's Laws of Motion", items: [] },
@@ -17,47 +18,6 @@ const units = [
   { id: 7, title: "Unit 7 — Simple Machines", items: [] },
   { id: 8, title: "Unit 8 — Rotational Motion", items: [] },
 ];
-
-
-// --- Password Prompt Modal Component ---
-function PasswordModal({ item, onCorrect, onCancel }) {
-  const [input, setInput] = useState("");
-  const [error, setError] = useState(false);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (input === item.password) {
-      setError(false);
-      onCorrect();
-    } else {
-      setError(true);
-      setInput("");
-    }
-  };
-
-  return (
-    <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
-      <div className="bg-zinc-800 rounded-2xl p-6 border border-zinc-700 shadow-xl max-w-sm w-full">
-        <h3 className="text-lg font-semibold text-white">Password Required</h3>
-        <p className="text-sm text-zinc-400 mt-1">This lesson is locked. Please enter the password to continue.</p>
-        <form onSubmit={handleSubmit} className="mt-4">
-          <input
-            type="password"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            className={`w-full bg-zinc-900 border rounded-xl p-2 text-white ${error ? 'border-red-500 ring-2 ring-red-500/50' : 'border-zinc-600'}`}
-            autoFocus
-          />
-          {error && <p className="text-red-400 text-xs mt-1">Incorrect password. Please try again.</p>}
-          <div className="flex gap-2 mt-4">
-            <button type="button" onClick={onCancel} className="flex-1 px-4 py-2 rounded-xl bg-zinc-700 hover:bg-zinc-600">Cancel</button>
-            <button type="submit" className="flex-1 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500">Unlock</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
 
 
 export default function Portal() {
@@ -145,13 +105,6 @@ export default function Portal() {
           </p>
         </section>
         <div><br /></div>
-                          {/* Equation Sheet */}
-          <section id="equations" className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/60">
-          <h2 className="text-xl font-semibold">Guided Notes</h2>
-          <p className="mt-2 text-sm text-zinc-300 max-w-prose">
-          <a href="./documents/Physics_Unit1_Guided_Notes.pdf" target="_blank" className="px-3 py-1.5 rounded-xl bg-zinc-800 hover:bg-zinc-700">Unit 1 Guided Notes</a>
-          </p>
-        </section>
         </section>
 
         {/* Lab Safety */}
@@ -189,7 +142,7 @@ export default function Portal() {
                       <li className="text-zinc-400">(No SPAs linked yet)</li>
                     )}
                     {u.items.map((it, idx) => (
-                      <li key={idx}>
+                      <li key={idx} className="flex items-center justify-between">
                         <a
                           className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700"
                           href={it.href}
@@ -201,6 +154,19 @@ export default function Portal() {
                           <span>↗</span>
                           <span>{it.name}</span>
                         </a>
+                        {it.notes && (
+                          <a
+                            className="ml-1 inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-600 hover:bg-gray-500 text-sm"
+                            href={it.notes.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            onClick={(e) => handleLinkClick(e, it.notes)}
+                          >
+                            <span>{it.notes.password && <span className="text-amber-400 mr-2">🔒</span>}
+                            <span>📝</span></span>
+                            <span>{it.notes.name}</span>
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
