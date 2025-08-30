@@ -4,8 +4,8 @@ import PasswordModal from './Password.jsx';
 // --- Data for the Units (Updated) ---
 const units = [
   { id: 1, title: "Unit 1 — The Science of Physics", items: [
-    {name: "1.1 and 1.2 Intro to Physics", href: "./units/1_1_2intro/index.html", notes: { name: "1.1 & 1.2 Guided Notes", href: "./documents/GuidedNotes/1_1_1_2GuidedNotes.pdf", password: "notes1112" }},
-    {name: "1.3 Measurement", href: "./units/1_3measurement/index.html", password: "phys13", notes: { name: "1.3 Guided Notes", href: "./documents/GuidedNotes/1_3GuidedNotes.pdf", password: "notes13" }},
+    {name: "1.1 and 1.2 Intro to Physics", href: "./units/1_1_2intro/index.html", notes: { name: "1.1 & 1.2 Guided Notes", href: "./documents/GuidedNotes/1_1_1_2GuidedNotes.pdf", }},
+    {name: "1.3 Measurement", href: "./units/1_3measurement/index.html", password: "kyhs13", notes: { name: "1.3 Guided Notes", href: "./documents/GuidedNotes/1_3GuidedNotes.pdf", password: "kyhs13" }},
     { name: "1.4 Math Tools", href: "./units/1_4mathTools/index.html", password: "phys14", notes: { name: "1.4 Guided Notes", href: "./documents/GuidedNotes/1_4GuidedNotes.pdf", password: "notes14" }},
     { name: "1.5 Vectors", href: "./units/1_5vectors/index.html", password: "phys15", notes: { name: "1.5 Guided Notes", href: "./documents/GuidedNotes/1_5GuidedNotes.pdf", password: "notes15" }},
     { name: "1.6 & 1.7 Vector Addition", href: "./units/1_6_7vectorAddition/index.html", password: "phys1617", notes: { name: "1.6 & 1.7 Guided Notes", href: "./documents/GuidedNotes/1_6_1_7GuidedNotes.pdf", password: "notes1617" }},
