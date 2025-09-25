@@ -1,0 +1,108 @@
+{
+  "id": "P1_4mathTools",
+  "title": "Unit 1.4 — Mathematical Tools in Physics",
+  "nav": ["overview", "notes", "interactive", "examples", "practice", "images"],
+  "views": {
+    "overview": [
+      "I. Lesson Goals",
+      "- Use scientific notation to express very large and very small numbers.",
+      "- Apply rules of significant figures to multiplication, division, addition, and subtraction.",
+      "- Interpret slopes on graphs as physical quantities (e.g., speed).",
+      "- Perform dimensional analysis (unit conversions) correctly."
+    ],
+
+    "notes": {
+      "steps": [
+        "I. Measurement and Uncertainty",
+
+        "A. Scientific Notation",
+        "- Method for writing very large or very small numbers compactly.",
+        "- Format: coefficient (1–10) × 10ⁿ.",
+        "//image _ scientific_notation.png",
+        "- Moving the decimal LEFT → positive exponent (e.g., 5,800,000 → 5.8 × 10⁶).",
+        "- Moving the decimal RIGHT → negative exponent (e.g., 0.00045 → 4.5 × 10⁻⁴).",
+
+        "B. Significant Figures",
+        "- Communicate the precision of a measurement (all certain digits + one estimated digit).",
+        "- Rule 1: Non-zero digits are always significant.",
+        "- Rule 2: Zeros between non-zero digits are significant (e.g., 50.3 → 3 sig figs).",
+        "- Rule 3: Leading zeros are not significant (e.g., 0.0025 → 2 sig figs).",
+        "- Rule 4: Trailing zeros are significant only if a decimal point is present (e.g., 150 → 2 sig figs; 150.0 → 4 sig figs).",
+
+        "C. Calculations with Significant Figures",
+        "- Multiplication/Division: round result to same sig figs as factor with fewest sig figs.",
+        "- Addition/Subtraction: round result to same decimal places as term with fewest decimal places.",
+
+        "II. Physics Equations as Tools",
+        "- Equations model relationships between physical quantities.",
+        "- Example: v = d / t (speed = distance / time).",
+
+        "III. Graphing Data",
+        "//image _ graph_slope.png",
+        "- Graphs visualize relationships between two variables.",
+        "- Independent variable → x-axis; Dependent variable → y-axis.",
+        "A. Interpreting Slope",
+        "- Slope = rise/run = Δy / Δx.",
+        "- Example: On a distance vs. time graph, slope = speed.",
+
+        "IV. Dimensional Analysis (Unit Conversion)",
+        "//image _ dimensional_analysis.png",
+        "- Technique for converting a measurement from one unit to another.",
+        "- Multiply by conversion factors (fractions equal to 1).",
+        "- Arrange factors so that unwanted units cancel, leaving the desired units."
+      ]
+    },
+
+    "interactive": {
+      "href": "./toolviewer/index.html#/unit-converter",
+      "label": "Open Tool (Unit Converter)",
+      "embed": true,
+      "iframeHeight": "75vh"
+    },
+
+    "examples": {
+      "steps": [
+        "Ex 1 — Convert 365 days into seconds.",
+        "Step 1: Start with given value: 365 days.",
+        "Step 2: Identify conversion factors: 24 hr/day, 60 min/hr, 60 s/min.",
+        "Step 3: Set up so units cancel.",
+        "Step 4: Perform calculation.",
+        "Conclusion: (365 days) × (24 hr/day) × (60 min/hr) × (60 s/min) = 31,536,000 s.",
+
+        "Ex 2 — A car travels 150 km in 2 hours. Find the slope on a distance vs. time graph.",
+        "Step 1: Identify variables → Time (independent, x-axis), Distance (dependent, y-axis).",
+        "Step 2: Plot points (0 hr, 0 km) and (2 hr, 150 km).",
+        "Step 3: Calculate slope = Δdistance / Δtime.",
+        "Conclusion: (150 – 0) / (2 – 0) = 75 km/hr. Slope = average speed."
+      ]
+    },
+
+    "practice": {
+      "steps": [
+        "Practice 1 — Prompt: What are two common ways of displaying data?",
+        "Practice 1 — Target: Data tables and graphs.",
+
+        "Practice 2 — Prompt: Define 'rise' and 'run' in a line graph.",
+        "Practice 2 — Target: Rise = vertical change (Δy), Run = horizontal change (Δx).",
+
+        "Practice 3 — Prompt: What does slope represent on a straight-line graph?",
+        "Practice 3 — Target: The relationship between variables, calculated as rise/run (Δy/Δx).",
+
+        "Practice 4 — Prompt: What is dimensional analysis used for?",
+        "Practice 4 — Target: Converting measurements from one unit to another.",
+
+        "Practice 5 — Prompt: Convert 12.5 km to meters.",
+        "Practice 5 — Target: 12.5 km × (1000 m / 1 km) = 12,500 m.",
+
+        "Practice 6 — Prompt: Convert 2.5 days to seconds.",
+        "Practice 6 — Target: 2.5 days × (24 hr/day) × (3600 s/hr) = 216,000 s."
+      ]
+    },
+
+    "images": [
+      "scientific_notation.png",
+      "graph_slope.png",
+      "dimensional_analysis.png"
+    ]
+  }
+}

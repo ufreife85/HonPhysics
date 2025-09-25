@@ -1,0 +1,202 @@
+{
+  "id": "P2_4averageAcceleration",
+  "title": "Unit 2.4 — Average Acceleration",
+  "nav": ["overview", "notes", "interactive", "examples", "practice", "images"],
+  "views": {
+    "overview": [
+      "I. Lesson Goals",
+      "- Define average acceleration as rate of change of velocity: ā = Δv / Δt.",
+      "- Interpret signs: positive/negative acceleration relative to motion direction.",
+      "- Convert mixed units (km/h ↔ m/s) before computing acceleration.",
+      "- Read/relate motion on v–t graphs and connect to acceleration.",
+      "- Apply ā = (v_f − v_i)/Δt to real contexts (speeding up, slowing down)."
+    ],
+
+    "notes": {
+      "steps": [
+        "I. Launch Context",
+        "//image _ shuttle_atlantis.png",
+        "- Space Shuttle Atlantis must rapidly change its velocity to reach orbital speed.",
+        "- Any time velocity changes, the motion has acceleration.",
+
+        "II. What Is Average Acceleration?",
+        "- Definition: average acceleration ā is change in velocity per unit time.",
+        "- Formula: ā = Δv / Δt = (v_f − v_i) / (t_f − t_i).",
+        "- SI units: m/s² (meters per second per second).",
+
+        "III. Notation and Units",
+        "- v_i: initial velocity; v_f: final velocity; Δt: time interval.",
+        "- Keep units consistent. Convert km/h to m/s before using the formula.",
+        "- 1 km/h ≈ 0.27778 m/s; 1 m/s = 3.6 km/h.",
+
+        "IV. Vector Nature (Sign Matters)",
+        "//image _ accel_signs.png",
+        "- Acceleration is a vector in 1D: sign indicates direction along the x-axis.",
+        "- Positive acceleration points in +x; negative acceleration points in −x.",
+        "- A negative acceleration (sometimes called deceleration) means acceleration is opposite the chosen + direction.",
+
+        "V. Speeding Up vs. Slowing Down",
+        "- If an object is moving in +x and speeds up → a > 0.",
+        "- If moving in +x and slows down → a < 0 (opposite to motion).",
+        "- If moving in −x and speeds up toward −x → a < 0 (same direction as motion).",
+
+        "VI. Skateboarder Example (Direction Focus)",
+        "//image _ skateboarder_motion.png",
+        "- Moving right (+): slowing to a stop → a is negative.",
+        "- Turning left (−) and speeding up → v negative and a negative (same direction).",
+
+        "VII. Average Acceleration from Speeds",
+        "- Use ā = (v_f − v_i)/Δt directly when you know start/end velocities and time.",
+        "- Example structure: identify v_i, v_f, compute Δv, divide by Δt, include sign/units.",
+
+        "VIII. Mixed Units Example (Why Convert?)",
+        "- If v is given in km/h and t in s, convert v to m/s so the result is in m/s².",
+        "- Consistent units avoid mistakes and make answers comparable.",
+
+        "IX. v–t Graphs and Acceleration",
+        "//image _ vt_pieces.png",
+        "- On a velocity–time graph, the slope equals acceleration.",
+        "- Positive slope → positive acceleration; negative slope → negative acceleration.",
+        "- Flat (horizontal) segment on v–t → a = 0 (constant velocity).",
+
+        "X. Connecting x–t, v–t, and a",
+        "- From x–t: slope gives v; changing slope implies changing v → acceleration present.",
+        "- From v–t: slope gives a directly; area under v–t gives displacement Δx.",
+        "- Average acceleration over an interval equals the slope of the secant line on v–t.",
+
+        "XI. Solving Strategy",
+        "- Step 1: Write given values (v_i, v_f, Δt) with signs and units.",
+        "- Step 2: Convert units if needed (e.g., km/h → m/s).",
+        "- Step 3: Compute Δv = v_f − v_i (keep the sign).",
+        "- Step 4: Compute ā = Δv / Δt with units m/s².",
+        "- Step 5: Interpret the sign in context (speeding up vs. slowing down).",
+
+        "XII. Common Pitfalls",
+        "- Mixing units (km/h with s) → convert first.",
+        "- Dropping the sign on Δv or ā.",
+        "- Calling any negative ā “deceleration” without considering direction and motion sign.",
+
+        "XIII. Summary",
+        "- Average acceleration: ā = Δv/Δt with units m/s².",
+        "- Signs encode direction; slowing down in +x gives a negative ā.",
+        "- On v–t graphs, slope = acceleration; flats mean a = 0."
+      ]
+    },
+
+    "interactive": {
+      "href": "./toolviewer/index.html#/average-acceleration-explorer",
+      "label": "Open Tool (Average Acceleration Explorer)",
+      "embed": true,
+      "iframeHeight": "75vh"
+    },
+
+    "examples": {
+      "steps": [
+        "Ex 1 — Convert km/h to m/s, then find ā",
+        "Prompt: A car accelerates from rest to +60.0 km/h in 5.00 s. Find the magnitude of its average acceleration.",
+        "Step 1: v_i = 0.0 m/s; v_f = 60.0 km/h.",
+        "Step 2: Convert 60.0 km/h to m/s: 60.0 × (1000/3600) = 16.7 m/s (≈16.6–16.7 m/s).",
+        "Step 3: Δt = 5.00 s; compute Δv = 16.7 − 0 = 16.7 m/s.",
+        "Step 4: ā = Δv/Δt = 16.7 m/s ÷ 5.00 s = 3.34 m/s² (≈ 3.33 m/s²).",
+        "Conclusion: ā ≈ 3.33 m/s² (magnitude).",
+
+        "Ex 2 — Slowing down in +x (negative ā)",
+        "Prompt: An automobile slows from +15.0 m/s to +5.0 m/s in 5.0 s. Find the acceleration.",
+        "Step 1: v_i = +15.0 m/s; v_f = +5.0 m/s; Δt = 5.0 s.",
+        "Step 2: Δv = 5.0 − 15.0 = −10.0 m/s.",
+        "Step 3: ā = Δv/Δt = (−10.0 m/s) / 5.0 s = −2.0 m/s².",
+        "Conclusion: ā = −2.0 m/s² (opposite the +x motion).",
+
+        "Ex 3 — Interpreting direction words",
+        "Prompt: A skateboarder moving right slows to a stop; then speeds up left.",
+        "Step 1: Right is +x. Slowing while moving +x → ā negative.",
+        "Step 2: After turning, moving left (−x) and speeding up → ā negative (same direction as motion).",
+        "Conclusion: Both segments can have a negative acceleration, but for different reasons.",
+
+        "Ex 4 — v–t slope as acceleration",
+        "Prompt: On a v–t graph, how do you recognize acceleration and compute ā?",
+        "Step 1: Acceleration is the slope: ā = Δv/Δt from two points.",
+        "Step 2: Upward slope → ā > 0; downward slope → ā < 0; flat → ā = 0.",
+        "Conclusion: Use the secant slope on v–t to get the average acceleration."
+      ]
+    },
+
+    "practice": {
+      "steps": [
+        "[2.4] Q1 — Δv from a and time",
+        "Prompt: A fish experiences an average acceleration of 9.8 m/s² for 2.0 s. What is the change in velocity (Δv)?",
+        "Step 1: Use Δv = ā · Δt.",
+        "Step 2: Δv = (9.8 m/s²)(2.0 s) = 19.6 m/s.",
+        "Answer: 19.6 m/s.",
+
+        "[2.4] Q2 — Average acceleration while slowing",
+        "Prompt: An automobile slows from 50 m/s to 25 m/s in 5.0 s. What is the average acceleration?",
+        "Step 1: v_i = 50 m/s, v_f = 25 m/s, Δt = 5.0 s.",
+        "Step 2: Δv = 25 − 50 = −25 m/s.",
+        "Step 3: ā = Δv/Δt = (−25 m/s) / 5.0 s = −5.0 m/s².",
+        "Answer: −5.0 m/s².",
+
+        "[2.4] Q3 — Time from Δv and a (falling rock)",
+        "Prompt: A rock has Δv = −98 m/s due to ā = −9.8 m/s². How long did it fall?",
+        "Step 1: Use Δt = Δv / ā.",
+        "Step 2: Δt = (−98 m/s) / (−9.8 m/s²) = 10 s.",
+        "Answer: 10 s.",
+
+        "[2.4] Q4 — Time from Δv and a (upward sign convention)",
+        "Prompt: A rock has Δv = +112 m/s due to ā = +9.8 m/s². How long did it accelerate?",
+        "Step 1: Δt = Δv / ā = (112 m/s) / (9.8 m/s²).",
+        "Step 2: Δt ≈ 11.43 s.",
+        "Answer: 11.4 s (to 3 sig figs).",
+
+        "[2.4] Q5 — Identify the correct formula",
+        "Prompt: Which expression is the formula for average acceleration?",
+        "Step 1: By definition, ā = Δv/Δt = (v_f − v_i)/(t_f − t_i).",
+        "Answer: ā = Δv / Δt.",
+
+        "[2.4] Q6 — Given a and Δv, find time",
+        "Prompt: An automobile slows from 26 m/s to 18 m/s with acceleration ā = −2.0 m/s². How much time does it take?",
+        "Step 1: Δv = 18 − 26 = −8 m/s.",
+        "Step 2: Δt = Δv / ā = (−8 m/s) / (−2.0 m/s²) = 4.0 s.",
+        "Answer: 4.0 s.",
+
+        "[2.4] Q7 — Another slow-down interval",
+        "Prompt: A car changes velocity from 36 m/s to 28 m/s with ā = −2.0 m/s². How much time does this take?",
+        "Step 1: Δv = 28 − 36 = −8 m/s.",
+        "Step 2: Δt = Δv / ā = (−8 m/s) / (−2.0 m/s²) = 4.0 s.",
+        "Answer: 4.0 s.",
+
+        "[2.4] Q8 — Interpret signs carefully",
+        "Prompt: A car slows from 36 m/s to 28 m/s. If the acceleration (relative to +x) is −2.0 m/s², how long does it take to slow down?",
+        "Step 1: Δv = 28 − 36 = −8 m/s.",
+        "Step 2: Δt = Δv / ā = (−8)/(−2.0) = 4.0 s.",
+        "Answer: 4.0 s.",
+
+        "[2.4] Q9 — Average acceleration while speeding up",
+        "Prompt: Velocity increases from 2.0 m/s to 16.0 m/s in 3.5 s. What is the average acceleration?",
+        "Step 1: Δv = 16.0 − 2.0 = 14.0 m/s.",
+        "Step 2: ā = Δv/Δt = 14.0 / 3.5 = 4.0 m/s².",
+        "Answer: +4.0 m/s².",
+
+        "[2.4] Q10 — Time from Δv and a (repeat check)",
+        "Prompt: A falling rock’s velocity changes by −98 m/s under ā = −9.8 m/s². How long is the interval?",
+        "Step 1: Δt = Δv / ā = (−98)/(−9.8) s.",
+        "Step 2: Δt = 10 s.",
+        "Answer: 10 s."
+      ]
+    },
+
+    "images": [
+      "shuttle_atlantis.png",
+      "accel_signs.png",
+      "skateboarder_motion.png",
+      "vt_pieces.png"
+    ],
+
+    "images_meta": [
+      { "file": "shuttle_atlantis.png", "hint": "Launch image illustrating large Δv requirement; any shuttle/rocket liftoff image suitable." },
+      { "file": "accel_signs.png", "hint": "Simple 1D diagram showing +x/−x with vectors for v and a in different cases (speeding up vs slowing down)." },
+      { "file": "skateboarder_motion.png", "hint": "Cartoon or photo sequence: moving right slowing to stop; then moving left speeding up (match sign analysis in notes)." },
+      { "file": "vt_pieces.png", "hint": "Clean v–t sketch with flat, positive slope, and negative slope segments to connect slope↔acceleration." }
+    ]
+  }
+}

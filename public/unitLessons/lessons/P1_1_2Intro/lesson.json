@@ -1,0 +1,82 @@
+{
+  "id": "P1_1_2Intro",
+  "title": "Unit 1.1 & 1.2 — Intro to Physics",
+  "nav": ["overview", "notes", "interactive", "examples", "practice", "images"],
+  "views": {
+    "overview": [
+      "I. Lesson Goals",
+      "- Define physics and identify its major branches.",
+      "- Differentiate Observation, Hypothesis, Theory, and Law.",
+      "- Describe the scientific method as an iterative process.",
+      "- Connect physics concepts to real-world contexts (cosmic to microscopic)."
+    ],
+
+    "notes": {
+      "steps": [
+        "I. What is Physics? (1.1)",
+        "- Physics is the study of matter, energy, and their interactions.",
+        "- Physics underpins chemistry, biology, geology, and astronomy.",
+        "- Physicists seek patterns/principles from microscopic to cosmic.",
+        "//image _ galaxy.png",
+        "A. Major Branches of Physics",
+        "1. Classical Mechanics — motion of macroscopic objects; forces; orbits.",
+        "2. Thermodynamics — heat, temperature, energy transfer in large systems.",
+        "3. Electromagnetism — electricity, magnetism, light.",
+        "4. Relativity — high-speed motion; gravity as spacetime curvature.",
+        "5. Quantum Mechanics — behavior of subatomic particles.",
+        "II. The Scientific Method (1.2)",
+        "- A logical, systematic, **iterative** process for learning about nature.",
+        "//image _ scientific_method_flowchart.png",
+        "A. Key Components & Terminology",
+        "1. Observation — gathering information with senses/instruments.",
+        "2. Hypothesis — a **testable, falsifiable** explanation/prediction.",
+        "3. Experiment — controlled procedure to test the hypothesis; variables.",
+        "B. Theory vs. Law",
+        "1. Scientific Law — concise statement (often mathematical) of a pattern; the *what*.",
+        "   - Example Law: Newton’s Law of Universal Gravitation (describes gravitational force).",
+        "//image _ newtons_law_of_gravitation.png",
+        "2. Scientific Theory — broad, well-supported explanation; the *why*.",
+        "   - Example Theory: General Relativity explains gravity via curved spacetime."
+      ]
+    },
+
+    "interactive": {
+      "href": "./toolviewer/index.html#/statement-sorter",
+      "label": "Open Tool",
+      "embed": true,
+      "iframeHeight": "75vh"
+    },
+
+    "examples": {
+      "steps": [
+        "Ex 1 — Classify the statement\nStatement: \"Gravity causes the apple to fall.\"",
+        "Ex 1 — Step 1: Analyze whether it **describes** what happens or **explains why**.",
+        "Ex 1 — Step 2: It proposes a cause (gravity) for an observation (falling apple).",
+        "Ex 1 — Step 3: Explanatory frameworks = **Theory**.",
+        "Ex 1 — Conclusion: This belongs to a **Theory** (Theory of Gravitation).",
+        "Ex 2 — Is \"The sun will rise tomorrow\" a valid scientific hypothesis?",
+        "Ex 2 — Step 1: Recall definition — a hypothesis is a **testable prediction**.",
+        "Ex 2 — Step 2: Testability? Yes — wait until tomorrow and observe.",
+        "Ex 2 — Step 3: Grounded in extensive prior observations.",
+        "Ex 2 — Conclusion: It **meets** the criteria for a hypothesis."
+      ]
+    },
+
+    "practice": {
+      "steps": [
+        "Practice 1 — Prompt: What is the primary goal of physics?",
+        "Practice 1 — Target: Understand fundamental principles governing matter, energy, and interactions.",
+        "Practice 2 — Prompt: Distinguish between a scientific theory and a scientific law.",
+        "Practice 2 — Target: Law describes **what** happens (often formulaic); Theory explains **why** it happens (broad, tested explanation).",
+        "Practice 3 — Prompt: A student says plants grow taller with classical music. Make this testable.",
+        "Practice 3 — Target: \"If identical plants are grown under the same conditions, the group exposed to classical music will grow taller on average than the silent group.\""
+      ]
+    },
+
+    "images": [
+      "galaxy.png",
+      "scientific_method_flowchart.png",
+      "newtons_law_of_gravitation.png"
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "id": "P1_6_7vectorAddition",
+  "title": "Unit 1.6 & 1.7 — Vector Addition",
+  "nav": ["overview", "notes", "interactive", "tool", "examples", "practice", "images"],
+  "views": {
+    "overview": [
+      "I. Lesson Goals",
+      "- Review scalar vs. vector quantities and 1D sign conventions.",
+      "- Add vectors graphically using the head-to-tail method and interpret the resultant.",
+      "- Add perpendicular vectors using the Pythagorean theorem and inverse trig.",
+      "- Add non-perpendicular vectors with the component method (resolve → sum → recombine).",
+      "- Practice with two interactives: Graphical Vector Adder and Component Vector Adder."
+    ],
+
+    "notes": {
+      "steps": [
+        "I. Fundamentals of Vectors",
+        "- A scalar has magnitude only. Examples: 10 m/s (speed), 5 kg (mass).",
+        "- A vector has magnitude and direction. Examples: 10 m/s North (velocity), 20 N Down (force).",
+        "//image _ vector_arrow_labeled.png",
+        "- We draw vectors as arrows: length ∝ magnitude; arrow direction shows the vector’s direction.",
+        "- One-dimensional vectors (on a line) add/subtract arithmetically; a negative sign indicates opposite direction.",
+        "- Example: +7 and −3 sum to +4.",
+
+        "II. Graphical Addition: Head-to-Tail Method",
+        "- Primary visual method for adding 2D vectors.",
+        "Step 1: Draw the first vector to scale and direction.",
+        "Step 2: Place the tail of the second vector at the head of the first.",
+        "//image _ head_to_tail_setup.png",
+        "Step 3: The resultant is drawn from the original tail to the final head.",
+        "//image _ head_to_tail_resultant.png",
+        "- Order does not matter (commutative: A + B = B + A).",
+        "//image _ commutative_property.png",
+        "- For >2 vectors, continue head-to-tail; resultant goes from the very start to the very end.",
+
+        "III. Mathematical Addition for Perpendicular Vectors",
+        "- Perpendicular vectors form a right triangle with the resultant.",
+        "A. Magnitude (Hypotenuse)",
+        "//image _ pythagorean.png",
+        "- Use the Pythagorean theorem: R² = A² + B².",
+        "- Example: 90 m East and 50 m North → R = √(90² + 50²) = √10600 ≈ 103 m.",
+        "B. Direction (Angle)",
+        "- Use inverse trig (often tangent).",
+        "- θ = tan⁻¹(opposite/adjacent). For the example, θ ≈ tan⁻¹(50/90) ≈ 29.1°.",
+        "- State direction fully: 29.1° North of East.",
+
+        "IV. Component Method for Non-Perpendicular Vectors",
+        "- Most general method; works for any angles.",
+        "//image _ vector_components.png",
+        "Step 1: Resolve each vector into x and y components.",
+        "- Vₓ = V × cos(θ),   Vᵧ = V × sin(θ).",
+        "- Set signs by quadrant (West = −x, South = −y).",
+        "Step 2: Sum components",
+        "- Rₓ = ΣVₓ,   Rᵧ = ΣVᵧ.",
+        "Step 3: Recombine",
+        "- Resultant magnitude: R = √(Rₓ² + Rᵧ²).",
+        "- Resultant angle: θ = tan⁻¹(Rᵧ / Rₓ), with quadrant-aware direction wording."
+      ]
+    },
+
+    "interactive": {
+      "href": "./toolviewer/index.html#/graphical-vector-adder",
+      "label": "Open Tool (Graphical Vector Adder)",
+      "embed": true,
+      "iframeHeight": "75vh"
+    },
+
+    "tool": {
+      "href": "./toolviewer/index.html#/component-vector-adder",
+      "label": "Open Tool (Component Vector Adder)",
+      "embed": true,
+      "iframeHeight": "75vh"
+    },
+
+    "examples": {
+      "steps": [
+        "Ex 1 — Boat across a river: 16 m/s East + 9.0 m/s North → Resultant velocity",
+        "Step 1: Recognize perpendicular components (E and N).",
+        "Step 2: Magnitude R = √(16² + 9.0²) ≈ √(256 + 81) ≈ √337 ≈ 18.4 m/s.",
+        "Step 3: Direction θ = tan⁻¹(9.0/16) ≈ 29.4°.",
+        "Conclusion: 18.4 m/s at 29.4° North of East.",
+
+        "Ex 2 — Hiker: 11 km North then 11 km East → Displacement",
+        "Step 1: Perpendicular legs (11 N, 11 E).",
+        "Step 2: Magnitude R = √(11² + 11²) = √(242) ≈ 15.6 km.",
+        "Step 3: Direction θ = tan⁻¹(11/11) = 45°.",
+        "Conclusion: 15.6 km at 45° North of East.",
+
+        "Ex 3 — Two forces: 185 N East and 165 N at 30° North of East → Resultant force",
+        "Step 1: Resolve 165 N → (165 cos 30°, 165 sin 30°) ≈ (142.8 N, 82.5 N).",
+        "Step 2: Sum components → Rₓ = 185 + 142.8 = 327.8 N;  Rᵧ = 82.5 N.",
+        "Step 3: Magnitude R = √(327.8² + 82.5²) ≈ 338 N.",
+        "Step 4: Direction θ = tan⁻¹(82.5/327.8) ≈ 14.1°.",
+        "Conclusion: ≈338 N at 14.1° North of East.",
+
+        "Ex 4 — Plane: 90 km/h North and 50 km/h West → Resultant velocity",
+        "Step 1: Treat North (+y) and West (−x) as perpendicular.",
+        "Step 2: Magnitude R = √(90² + 50²) = √(8100 + 2500) = √10600 ≈ 103 km/h.",
+        "Step 3: Angle relative to North or East with correct quadrant.",
+        "Conclusion: ≈103 km/h at 29.1° West of North."
+      ]
+    },
+
+    "practice": {
+      "steps": [
+        "Practice 1 — Prompt: A hiker walks 11 km N then 11 km E. What total distance did they walk?",
+        "Practice 1 — Target: Distance is scalar → 11 + 11 = 22 km.",
+
+        "Practice 2 — Prompt: A plane flies East at 33 m/s with a 12 m/s wind blowing North. Find resultant speed and direction.",
+        "Practice 2 — Target: R = √(33² + 12²) ≈ 35.1 m/s; θ = tan⁻¹(12/33) ≈ 20° North of East.",
+
+        "Practice 3 — Prompt: Add a 4.0 km East vector to a 3.0 km North vector.",
+        "Practice 3 — Target: 3–4–5 triangle → 5.0 km at θ = tan⁻¹(3/4) ≈ 36.9° North of East.",
+
+        "Practice 4 — Prompt: Add the 1D vectors +7.5 m/s and −2.0 m/s.",
+        "Practice 4 — Target: 7.5 + (−2.0) = 5.5 m/s."
+      ]
+    },
+
+    "images": [
+      "vector_arrow_labeled.png",
+      "head_to_tail_setup.png",
+      "head_to_tail_resultant.png",
+      "commutative_property.png",
+      "pythagorean.png",
+      "vector_components.png"
+    ]
+  }
+}

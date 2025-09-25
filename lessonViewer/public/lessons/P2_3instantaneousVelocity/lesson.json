@@ -1,0 +1,201 @@
+{
+  "id": "P2_3instantaneousVelocity",
+  "title": "Unit 2.3 — Instantaneous Velocity",
+  "nav": ["overview", "notes", "interactive", "examples", "practice", "images"],
+  "views": {
+    "overview": [
+      "I. Lesson Goals",
+      "- Define instantaneous velocity as velocity at a single moment (with direction/sign).",
+      "- Relate slope on a position–time (x–t) graph to velocity (rise/run = Δx/Δt).",
+      "- Distinguish constant, average, and instantaneous velocity and when they are equal.",
+      "- Estimate instantaneous velocity on curved x–t graphs using a tangent line (no calculus).",
+      "- Sketch and interpret x–t and v–t graphs for simple motions.",
+      "- Use the PositionVelocityExplorer to link inputs (x₀, Vᵢ, V_f, Δt) to x(t) and v(t)."
+    ],
+
+    "notes": {
+      "steps": [
+        "I. Race Context — Changing Velocity",
+        "//image _ runner_start.png",
+        "- In a sprint, the runner starts from rest (v = 0) in the blocks.",
+        "- They quickly increase velocity during the drive phase.",
+        "- A well-trained athlete maintains near-top velocity through the finish.",
+
+        "II. Instantaneous Velocity — Definition",
+        "- Instantaneous velocity: the velocity at one specific moment in time.",
+        "- 1D convention: include direction via sign (e.g., + right/east, − left/west).",
+        "- Units: meters per second (m/s).",
+
+        "III. Average vs. Instantaneous vs. Constant Velocity",
+        "- Average velocity over an interval: v̄ = Δx / Δt (net change in position per time).",
+        "- Constant velocity: same velocity at every instant during the interval.",
+        "- If velocity is constant, then instantaneous = average = that constant value.",
+
+        "IV. Position–Time (x–t) Graphs: Slope Means Velocity",
+        "- On x–t, vertical change is displacement (Δx), horizontal change is time (Δt).",
+        "- The slope (rise/run) equals Δx/Δt and represents the velocity.",
+        "- Larger positive slope → larger positive velocity; zero slope → v = 0; negative slope → negative velocity.",
+
+        "V. Constant Velocity on x–t",
+        "//image _ xt_constant_80ms.png",
+        "- Constant velocity → straight line on x–t (same slope everywhere).",
+        "- Example: slope = +80 m/s means the object moves +80 meters each second.",
+        "- For this motion, instantaneous velocity = average velocity = +80 m/s at all times.",
+
+        "VI. Changing Velocity (Acceleration) on x–t",
+        "- Accelerated motion produces a curved (nonlinear) x–t graph.",
+        "- The slope now changes with time, so velocity changes with time.",
+
+        "VII. Average vs. Instantaneous from x–t",
+        "- Average velocity on an interval = slope of the secant line joining the two endpoints.",
+        "- Instantaneous velocity at a time t = slope of the tangent line at that point.",
+
+        "VIII. Estimating a Tangent Slope (No Calculus)",
+        "//image _ tangent_xt.png",
+        "- Place a straightedge so it just touches the curve at one point (tangent).",
+        "- Choose two readable points on the straightedge, read their (t, x) values.",
+        "- Compute slope ≈ Δx/Δt for those two points → instantaneous velocity estimate.",
+
+        "IX. Worked Tangent Estimate (Example)",
+        "- Suppose the tangent near t = 4.0 s rises ~170 m over a run of 4.0 s.",
+        "- Then v_inst ≈ 170 m / 4.0 s = 42.5 m/s (≈ 43 m/s).",
+        "- Interpretation: the object’s instantaneous velocity at that moment is about +43 m/s.",
+
+        "X. Signs, Directions, and Common Pitfalls",
+        "- Positive slope → motion in +x; negative slope → motion in −x.",
+        "- Flat segments (slope = 0) indicate the object is at rest for that interval.",
+        "- Don’t mix up speed (no sign) with velocity (has sign).",
+        "- Always include units (m, s, m/s) and sign/direction when appropriate.",
+
+        "XI. From x–t to v–t",
+        "- For constant velocity (straight x–t), v–t is a horizontal line at that velocity value.",
+        "- For constant acceleration (curved x–t), v–t is a straight sloped line (velocity changes uniformly).",
+        "- For “speed up then cruise,” x–t curve steepens then becomes linear; v–t rises then flattens.",
+
+        "XII. Reading Plateaus and Downhill Segments",
+        "- Plateau on x–t → v = 0 during that interval (not moving).",
+        "- Downhill (x decreases) on x–t → negative velocity; magnitude from the slope.",
+
+        "XIII. Units and Slope Checks",
+        "- Slope units on x–t: (meters)/(seconds) = m/s → matches velocity units.",
+        "- If your slope comes out in just meters or just seconds, you misread the axes.",
+        "- Use convenient grid points to reduce reading error; avoid extremely small runs.",
+
+        "XIV. Quick Strategy for Graph Questions",
+        "- 1) Identify the time interval and read x at the endpoints.",
+        "- 2) Compute Δx and Δt; include signs.",
+        "- 3) Report v̄ = Δx/Δt with units and sign.",
+        "- 4) For v_inst at a point: draw/visualize a tangent line and estimate its slope.",
+
+        "XV. Summary",
+        "- The slope of x–t is velocity (rise/run = Δx/Δt).",
+        "- Constant velocity: straight x–t; instantaneous, average, and constant velocities are equal everywhere.",
+        "- With acceleration, use a tangent to estimate instantaneous velocity at a point on x–t."
+      ]
+    },
+
+    "interactive": {
+      "href": "./toolviewer/index.html#/instantaneous-velocity-explorer",
+      "label": "Open Tool (InstantaneousVelocityExplorer)",
+      "embed": true,
+      "iframeHeight": "75vh"
+    },
+
+    "examples": {
+      "steps": [
+        "Ex 1 — Draw v–t for constant velocity",
+        "Prompt: Draw a velocity–time graph for an object with constant velocity 15 m/s, for the first 5.0 s.",
+        "Step 1: Constant velocity means v does not change with time.",
+        "Step 2: On v–t, draw a horizontal line at v = +15 m/s from t = 0 to t = 5.0 s.",
+        "Conclusion: v–t is flat at +15 m/s for 0–5 s.",
+
+        "Ex 2 — Average velocity on x–t (1 to 3 s)",
+        "//image _ pvt_graph.png",
+        "Step 1: v̄ = Δx/Δt between t = 1 s and t = 3 s.",
+        "Step 2: Read x(1) and x(3) from the graph; compute Δx = x(3) − x(1).",
+        "Step 3: Compute v̄ = Δx / (3 − 1) = Δx / 2.",
+        "Conclusion: The example graph indicates a positive constant slope → a positive average velocity (e.g., +20 m/s).",
+
+        "Ex 3 — Average velocity on x–t (3 to 4 s)",
+        "//image _ pvt_graph.png",
+        "Step 1: v̄ = Δx/Δt between t = 3 s and t = 4 s.",
+        "Step 2: The segment is flat → Δx = 0.",
+        "Conclusion: v̄ = 0 / 1 = 0 m/s.",
+
+        "Ex 4 — Average velocity on x–t (5 to 6 s)",
+        "//image _ pvt_graph.png",
+        "Step 1: v̄ = Δx/Δt between t = 5 s and t = 6 s.",
+        "Step 2: The segment slopes downward (x decreases) → negative Δx.",
+        "Conclusion: v̄ is negative over 5–6 s; compute from the two points on the graph."
+      ]
+    },
+
+    "practice": {
+      "steps": [
+        "[2.3] Q1 — Which term best describes the velocity of an object at a given moment in time?",
+        "Step 1: Identify the phrase “at a given moment.” This refers to an instant (not an interval).",
+        "Step 2: By definition, that is instantaneous velocity.",
+        "Answer: Instantaneous Velocity.",
+
+        "[2.3] Q2 — What is the average velocity in the time interval 3 to 4 seconds?",
+        "//image _ pvt_graph.png",
+        "Step 1: Average velocity on x–t equals slope from t = 3 s to t = 4 s.",
+        "Step 2: The segment is flat → Δx = 0.",
+        "Step 3: v̄ = Δx/Δt = 0/1 = 0 m/s.",
+        "Answer: 0 m/s.",
+
+        "[2.3] Q3 — On a standard position–time graph, the slope of the line represents the average velocity. (T/F)",
+        "Step 1: The slope between two times equals Δx/Δt by definition.",
+        "Step 2: Δx/Δt is the average velocity over that interval.",
+        "Answer: TRUE.",
+
+        "[2.3] Q4 — “It is not possible to accurately calculate instantaneous velocity.” (T/F)",
+        "Step 1: In calculus, instantaneous velocity is dx/dt (exact for smooth motion).",
+        "Step 2: Without calculus, we can still approximate by drawing a tangent line and finding its slope at that instant.",
+        "Answer: FALSE.",
+
+        "[2.3] Q5 — Which best describes a position–time graph for an accelerating object?",
+        "Step 1: With acceleration, velocity changes; therefore, slope changes with time.",
+        "Step 2: Changing slope means the x–t line is curved (nonlinear).",
+        "Answer: a curved line.",
+
+        "[2.3] Q6 — What is the average velocity in the time interval 4.5 to 6.0 seconds?",
+        "//image _ pvt_graph.png",
+        "Step 1: v̄ = Δx/Δt with endpoints at t = 4.5 s and t = 6.0 s.",
+        "Step 2: From the given graph, x decreases by ~40.5 m over 1.5 s (representative reading).",
+        "Step 3: v̄ ≈ (−40.5 m)/(1.5 s) ≈ −27 m/s.",
+        "Answer: −27 m/s.",
+
+        "[2.3] Q7 — In what type of motion does the x–t slope give the constant, average, and instantaneous velocities at every point?",
+        "Step 1: This occurs when velocity does not change with time.",
+        "Step 2: Then x–t is a straight line and the slope is the same everywhere.",
+        "Answer: Constant velocity.",
+
+        "[2.3] Q8 — What is the average velocity in the time interval 1 to 3 seconds?",
+        "//image _ pvt_graph.png",
+        "Step 1: v̄ = Δx/Δt between t = 1 s and t = 3 s.",
+        "Step 2: Read x(1) and x(3) from the graph (e.g., Δx ≈ +40 m).",
+        "Step 3: v̄ = Δx / 2 s → about +20 m/s on the provided scale.",
+        "Answer: +20 m/s.",
+
+        "[2.3] Q9 — During which time interval is the object NOT moving according to this graph?",
+        "//image _ pvt_graph.png",
+        "Step 1: “Not moving” means v = 0 → slope = 0 (flat x–t).",
+        "Step 2: The flat portion occurs from t = 0 to t = 1 s.",
+        "Answer: 0–1 second.",
+
+        "[2.3] Q10 — If dx is the change in position and dt is the corresponding time interval, which expression represents instantaneous velocity?",
+        "Step 1: Instantaneous velocity is the rate of change of position with respect to time at an instant.",
+        "Step 2: Symbolically, v = dx/dt (limit as dt → 0).",
+        "Answer: dx/dt."
+      ]
+    },
+
+    "images": [
+      "runner_start.png",
+      "xt_constant_80ms.png",
+      "tangent_xt.png",
+      "pvt_graph.png"
+    ]
+  }
+}
