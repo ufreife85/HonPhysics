@@ -12,6 +12,7 @@ import VectorScalarSorter from './tools/VectorScalarSorter.jsx';
 import PositionVelocityExplorer from './tools/PositionVelocityExplorer.jsx';
 import InstantaneousVelocityExplorer from './tools/InstantaneousVelocityExplorer.jsx';
 import AverageAccelerationExplorer from './tools/AverageAccelerationExplorer.jsx';
+import UniformAccelerationExplorer from './tools/UniformAccelerationExplorer.jsx';
 
 // --- Tool Configuration ---
 // IMPORTANT: Set the passwords for each tool here.
@@ -26,7 +27,7 @@ const tools = [
   { id: 'position-velocity-explorer', name: 'Position Velocity Explorer', component: PositionVelocityExplorer, password: 'toolPVE' },
   { id: 'instantaneous-velocity-explorer', name: 'Instantaneous Velocity Explorer', component: InstantaneousVelocityExplorer, password: 'toolIVE' },
   { id: 'average-acceleration-explorer', name: 'Average Acceleration Explorer', component: AverageAccelerationExplorer, password: 'toolAAE' },
-
+  { id: 'uniform-acceleration-explorer', name: 'Uniform Acceleration Explorer', component: UniformAccelerationExplorer, password: 'toolUAE' },
 ];
 
 // Sort the tools array alphabetically by name

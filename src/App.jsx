@@ -23,8 +23,9 @@ const units = [
     title: "Unit 2 — Motion in One Dimension",
     items: [
       { name: "2.1–2.2 Position, Distance, Displacement & Avg Velocity", href: "./unitLessons/index.html#/P2_1_2positionVelocity?view=overview", password: "phys2122", notes: { name: "2.1 & 2.2 Guided Notes", href: "./documents/GuidedNotes/2.1GuidedNotes.pdf", password: "notes2122" } },
-      { name: "2.3 Instantaneous Velocity", href: "./unitLessons/index.html#/P2_3instantaneousVelocity?view=overview", password: "phys2123", notes: { name: "2.3 Guided Notes", href: "./documents/GuidedNotes/2.3GuidedNotes.pdf", password: "notes2123" } },
-      { name: "2.4 Average Acceleration", href: "./unitLessons/index.html#/P2_4averageAcceleration?view=overview", password: "phys2124", notes: { name: "2.4 Guided Notes", href: "./documents/GuidedNotes/2.4GuidedNotes.pdf", password: "notes2124" } }
+      { name: "2.3 Instantaneous Velocity", href: "./unitLessons/index.html#/P2_3instantaneousVelocity?view=overview", password: "phys23", notes: { name: "2.3 Guided Notes", href: "./documents/GuidedNotes/2.3GuidedNotes.pdf", password: "notes2123" } },
+      { name: "2.4 Average Acceleration", href: "./unitLessons/index.html#/P2_4averageAcceleration?view=overview", password: "phys24", notes: { name: "2.4 Guided Notes", href: "./documents/GuidedNotes/2.4GuidedNotes.pdf", password: "notes2124" } },
+      { name: "2.5 Uniform (Constant) Acceleration", href: "./unitLessons/index.html#/P2_5uniformAcceleration?view=overview", password: "phys25", notes: { name: "2.5 Guided Notes", href: "./documents/GuidedNotes/2.5GuidedNotes.pdf", password: "notes2125" } },
     ]
   },
 

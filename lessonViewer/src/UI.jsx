@@ -40,17 +40,26 @@ function labelForTab(k) {
 function looksLikeTitle(line) {
   const t = String(line || "").trim();
   if (!t) return false;
-  if (/^\s*[-•]/.test(t)) return false;              // not a bullet
-  if (/^\d+[.)]\s/.test(t)) return false;             // not 1. / 1) ...
-  if (/^[A-Za-z][.)]\s/.test(t)) return false;        // not A. / A) / a. ...
-  if (/^[IVXLCDMivxlcdm]+[.)]\s/.test(t)) return false; // not I. / i) ...
-  if (/[.!?:;]\s*$/.test(t)) return false;            // no terminal punctuation
-  if (t.split(/\s+/).length < 3) return false;        // at least 3 words
+  if (/^\s*[-•]/.test(t)) return false;                    // not a bullet
+  if (/^\d+[.)]\s/.test(t)) return false;                  // not 1. / 1)
+  if (/^[A-Za-z][.)]\s/.test(t)) return false;             // not A. / A) / a.
+  if (/^(?:I|II|III|IV|V|VI|VII|VIII|IX|X|i|ii|iii|iv|v|vi|vii|viii|ix|x)[.)]\s/.test(t)) return false; // not Roman I–X
+  if (/[.!?:;]\s*$/.test(t)) return false;                 // no terminal punctuation
+  if (t.split(/\s+/).length < 3) return false;             // at least 3 words
   if ((t.match(/[A-Za-z]/g) || []).length < 5) return false;
-  // prevent “Target:” style lines from being mistaken as headings
-  if (t.includes(":")) return false;
+  if (t.includes(":")) return false;                       // avoid “Target:” headings
   return true;
 }
+
+// Explicit marker regexes
+const RX_TOP_ROMAN =
+  /^(?:I|II|III|IV|V|VI|VII|VIII|IX|X)[.)]\s+/;            // whitelist I–X only
+const RX_LOW_ROMAN =
+  /^(?:i|ii|iii|iv|v|vi|vii|viii|ix|x)[.)]\s+/;            // whitelist i–x only
+const RX_UPPER_LETTER = /^[A-Z][.)]\s+/;                   // A. / A)
+const RX_LOWER_LETTER = /^[a-z][.)]\s+/;                   // a. / a)
+const RX_NUMBER       = /^\d+[.)]\s+/;                     // 1. / 1)
+const RX_BULLET       = /^\s*-\s+/;
 
 function outlineInfo(rawLine = "") {
   const line = String(rawLine ?? "");
@@ -60,13 +69,14 @@ function outlineInfo(rawLine = "") {
   const img = /^\s*\/\/image\s*_\s*(.+)$/i.exec(trimmed);
   if (img) return { kind: "image", text: img[1].trim(), level: 0 };
 
-  // Explicit markers
-  if (/^[IVXLCDM]+[.)]\s+/.test(trimmed)) return { kind: "heading", text: trimmed, level: 1 };
-  if (/^[ivxlcdm]+[.)]\s+/.test(trimmed)) return { kind: "heading", text: trimmed, level: 1 };
-  if (/^[A-Z][.)]\s+/.test(trimmed))      return { kind: "heading", text: trimmed, level: 2 };
-  if (/^\d+[.)]\s+/.test(trimmed))        return { kind: "heading", text: trimmed, level: 3 };
-  if (/^[a-z][.)]\s+/.test(trimmed))      return { kind: "subpoint", text: trimmed, level: 4 };
-  if (/^\s*-\s+/.test(line))              return { kind: "bullet",  text: line.replace(/^\s*-\s+/, ""), level: 5 };
+  // ---- Explicit markers (ORDER MATTERS) ----
+  // Prioritize letters & numbers so "C." doesn't get mis-read as Roman 100
+  if (RX_UPPER_LETTER.test(trimmed)) return { kind: "heading", text: trimmed, level: 2 };
+  if (RX_NUMBER.test(trimmed))       return { kind: "heading", text: trimmed, level: 3 };
+  if (RX_LOWER_LETTER.test(trimmed)) return { kind: "subpoint", text: trimmed, level: 4 };
+  if (RX_TOP_ROMAN.test(trimmed))    return { kind: "heading", text: trimmed, level: 1 };
+  if (RX_LOW_ROMAN.test(trimmed))    return { kind: "heading", text: trimmed, level: 1 };
+  if (RX_BULLET.test(line))          return { kind: "bullet",  text: line.replace(RX_BULLET, ""), level: 5 };
 
   // Implicit heading
   if (looksLikeTitle(trimmed)) return { kind: "heading", text: trimmed, level: 2 };
@@ -85,7 +95,8 @@ function padClass(level) {
   }
 }
 
-/* === Minimal inline markdown (bold/italic/underscore) === */
+/* === Minimal inline markdown (bold/italic/underscore) ===
+     Passes through HTML like <sub>/<sup> so formulas render. */
 function mdToHtml(s = "") {
   return s
     .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
