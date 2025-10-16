@@ -58,7 +58,7 @@
     "interactive": {
       "embed": true,
       "iframeHeight": "75vh",
-      "src": "./toolviewer/index.html#/uniform-acceleration-explorer"
+      "href": "./toolviewer/index.html#/uniform-acceleration-explorer"
     },
     "examples": {
       "steps": [

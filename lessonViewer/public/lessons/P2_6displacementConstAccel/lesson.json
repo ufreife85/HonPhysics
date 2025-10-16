@@ -1,0 +1,110 @@
+{
+  "id": "P2_6displacementConstAccel",
+  "title": "Unit 2.6 — Displacement During Constant Acceleration",
+  "nav": ["overview", "notes", "interactive", "examples", "practice", "images"],
+  "views": {
+    "overview": "Goals: Use the three constant-acceleration kinematic equations to relate displacement Δx to time, velocity, and acceleration; interpret slope/area on velocity–time graphs; apply formulas to real contexts (runways, braking cars, pitched balls).",
+    "notes": {
+      "steps": [
+        "I. Context & Key Idea",
+        "A. When acceleration is constant, displacement relates predictably to time and velocity.",
+        "B. Many motions approximate constant acceleration (e.g., free fall when air resistance is negligible).",
+        "C. Constant velocity is the special case a = 0: Δx = v t.",
+        "II. Three Core Equations (Constant a)",
+        "A. Average-velocity form (Equation 1): Δx = v<sub>avg</sub> t where v<sub>avg</sub> = (v<sub>i</sub> + v<sub>f</sub>)/2.",
+        "B. Time-explicit form (Equation 2): Δx = v<sub>i</sub> t + ½ a t<sup>2</sup>.",
+        "C. Time-eliminated form (Equation 3): v<sub>f</sub><sup>2</sup> = v<sub>i</sub><sup>2</sup> + 2 a Δx.",
+        "III. Derivations & Connections",
+        "A. From constant a: v<sub>f</sub> = v<sub>i</sub> + a t.",
+        "B. Substitute v<sub>avg</sub> = (v<sub>i</sub> + v<sub>f</sub>)/2 into Δx = v<sub>avg</sub> t to obtain Equation 1 explicitly.",
+        "C. Integrating velocity over time (or summing area under v–t) gives Δx = v<sub>i</sub> t + ½ a t<sup>2</sup> (Equation 2).",
+        "D. Combine v<sub>f</sub> = v<sub>i</sub> + a t with Equation 1 to eliminate t and get v<sub>f</sub><sup>2</sup> = v<sub>i</sub><sup>2</sup> + 2 a Δx (Equation 3).",
+        "IV. Graphical Interpretations (Velocity–Time)",
+        "A. Slope of v–t line = acceleration a (rise/run = Δv/Δt).",
+        "B. Area under v–t curve over an interval = displacement Δx for that interval.",
+        "C. Starting from rest with constant a gives a straight v–t line through the origin; its triangular area equals Δx = ½ (base)(height) = ½ t v<sub>f</sub>.",
+        "V. Common Simplifications & Conventions",
+        "A. If v<sub>i</sub> = 0, then Δx = ½ a t<sup>2</sup>, v<sub>f</sub> = a t, and v<sub>f</sub><sup>2</sup> = 2 a Δx.",
+        "B. Choose and keep a consistent sign convention (e.g., upward positive vs downward positive).",
+        "C. Units: v in m/s, a in m/s<sup>2</sup>, t in s, Δx in m; match significant figures to data.",
+        "//image _ figure1_runners.png",
+        "VI. Worked Geometry Link (Triangle Area on v–t)",
+        "A. For uniform a from rest: area = ½ (base)(height) = ½ (t)(v<sub>f</sub>) = Δx.",
+        "B. Using v<sub>f</sub> = v<sub>i</sub> + a t with v<sub>i</sub> = 0 gives Δx = ½ a t<sup>2</sup>, consistent with Equation 2.",
+        "//image _ figure2_vt_graph.png",
+        "//image _ figure3_triangle_area.png"
+      ]
+    },
+    "interactive": {
+      "embed": true,
+      "iframeHeight": "75vh",
+      "href": "./toolviewer/index.html#/uniform-acceleration-explorer"
+    },
+    "examples": {
+      "steps": [
+        "Example 1 — Minimum Runway Length (from rest)",
+        "I. A small plane must reach v<sub>f</sub> = 56 m/s with constant a = 12.0 m/s<sup>2</sup>; v<sub>i</sub> = 0. Find the minimum runway length Δx.",
+        "A. Use Equation 3 (eliminate time): v<sub>f</sub><sup>2</sup> = v<sub>i</sub><sup>2</sup> + 2 a Δx.",
+        "B. Solve for Δx: Δx = (v<sub>f</sub><sup>2</sup> − v<sub>i</sub><sup>2</sup>)/(2 a) = 56<sup>2</sup>/(2 × 12.0) m.",
+        "C. Compute: 3136 / 24.0 ≈ 130.7 m. Answer: Δx ≈ 131 m (3 s.f.).",
+        "Example 2 — Time to Travel 30.0 m from Rest",
+        "I. Car starts from rest (v<sub>i</sub> = 0) with a = 2.00 m/s<sup>2</sup>, travels Δx = 30.0 m. Find t.",
+        "A. Use Equation 2 with v<sub>i</sub> = 0: Δx = ½ a t<sup>2</sup> ⇒ t = √(2 Δx / a).",
+        "B. Substitute: t = √(2 × 30.0 / 2.00) = √(30.0) = 5.48 s. Answer: t ≈ 5.48 s.",
+        "Example 3 — Pitcher’s Fastball Acceleration",
+        "I. Ball accelerated uniformly over d = 3.50 m from v<sub>i</sub> = 0 to v<sub>f</sub> = 30.0 m/s. Find a.",
+        "A. Use Equation 3: v<sub>f</sub><sup>2</sup> = v<sub>i</sub><sup>2</sup> + 2 a d ⇒ a = (v<sub>f</sub><sup>2</sup> − v<sub>i</sub><sup>2</sup>)/(2 d).",
+        "B. a = 30.0<sup>2</sup> / (2 × 3.50) = 900 / 7.00 = 128.6 m/s<sup>2</sup>. Answer: a ≈ 1.29 × 10<sup>2</sup> m/s<sup>2</sup>.",
+        "Example 4 — Displacement from v–t Triangle (a = 6.0 m/s<sup>2</sup>, rest start)",
+        "I. Each second v increases by 6.0 m/s; after t seconds, v<sub>f</sub> = 6.0 t. For t = 6 s, the v–t area is a triangle.",
+        "A. Δx = area = ½ (base)(height) = ½ (6 s)(v<sub>f</sub>) = ½ (6)(36) = 108 m.",
+        "B. Check with Equation 2: Δx = ½ a t<sup>2</sup> = 0.5 × 6.0 × 36 = 108 m (matches)."
+      ]
+    },
+    "practice": {
+      "steps": [
+        "[2.6] Q1  What does the slope of a v–t graph represent?",
+        "Reason: Slope = Δv/Δt; for v–t, that is acceleration.",
+        "Answer: Acceleration.",
+        "[2.6] Q2  A car comes to a stop over 484 m with constant a = −8.0 m/s<sup>2</sup>. What was its initial speed?",
+        "Work: Use v<sub>f</sub><sup>2</sup> = v<sub>i</sub><sup>2</sup> + 2 a Δx with v<sub>f</sub>=0 ⇒ v<sub>i</sub>=√(−2 a Δx)=√(−2×(−8.0)×484)=√(7744)=88 m/s.",
+        "Answer: 88 m/s.",
+        "[2.6] Q3  What does the area under a v–t graph represent?",
+        "Reason: Area = ∫ v dt = Δx (displacement).",
+        "Answer: Displacement.",
+        "[2.6] Q4  A driver stops in 2.0 s from 22 m/s. What is a?",
+        "Work: a = (v<sub>f</sub> − v<sub>i</sub>)/t = (0 − 22)/2.0 = −11 m/s<sup>2</sup>.",
+        "Answer: −11 m/s<sup>2</sup>.",
+        "[2.6] Q5  Which equation is NOT valid for constant-a kinematics?",
+        "Choices:",
+        "a) v<sub>f</sub><sup>2</sup> = v<sub>i</sub><sup>2</sup> + 2 a d",
+        "b) d = v<sub>i</sub> t + ½ a t<sup>2</sup>",
+        "c) d = ((v<sub>i</sub> + v<sub>f</sub>)/2) t",
+        "d) d = v<sub>f</sub> t + ½ a t<sup>2</sup>",
+        "Explanation: The correct time-explicit form uses v<sub>i</sub>, not v<sub>f</sub>.",
+        "Answer: d).",
+        "[2.6] Q6  Airplane from rest travels 1350 m with constant a = 3.00 m/s<sup>2</sup>. How long?",
+        "Work: Δx = ½ a t<sup>2</sup> ⇒ t = √(2Δx/a) = √(2700/3.00) = √900 = 30 s.",
+        "Answer: 30 s.",
+        "[2.6] Q7  Time to travel 500 m from rest with a = 4.5 m/s<sup>2</sup>?",
+        "Work: t = √(2Δx/a) = √(1000/4.5) ≈ 14.91 s.",
+        "Answer: 15 s (to match key, 2 s.f.).",
+        "[2.6] Q8  From rest, a = 3.00 m/s<sup>2</sup>, for t = 20.0 s. Displacement?",
+        "Work: Δx = ½ a t<sup>2</sup> = 0.5 × 3.00 × (20.0)<sup>2</sup> = 600 m.",
+        "Answer: 600 m.",
+        "[2.6] Q9  a = 3.0 m/s<sup>2</sup>, v<sub>i</sub> = 21 m/s, t = 40 s. Displacement?",
+        "Work: Δx = v<sub>i</sub> t + ½ a t<sup>2</sup> = 21×40 + 0.5×3.0×1600 = 840 + 2400 = 3240 m.",
+        "Answer: 3240 m.",
+        "[2.6] Q10  a = 3.0 m/s<sup>2</sup>, v<sub>i</sub> = 21 m/s, v<sub>f</sub> = 60 m/s. Displacement?",
+        "Work: v<sub>f</sub><sup>2</sup> = v<sub>i</sub><sup>2</sup> + 2 a Δx ⇒ Δx = (v<sub>f</sub><sup>2</sup> − v<sub>i</sub><sup>2</sup>)/(2a) = (3600 − 441)/6 = 3159/6 = 526.5 m.",
+        "Answer: 527 m (3 s.f.)."
+      ]
+    },
+    "images": ["figure1_runners.png", "figure2_vt_graph.png", "figure3_triangle_area.png"],
+    "images_meta": [
+      { "file": "figure1_runners.png", "hint": "Long-distance runners at near-constant velocity (a ≈ 0); connects Δx = v t." },
+      { "file": "figure2_vt_graph.png", "hint": "v–t line with slope = a; shade area under curve to visualize Δx." },
+      { "file": "figure3_triangle_area.png", "hint": "Triangle area = ½ (base)(height); tie to Δx when starting from rest." }
+    ]
+  }
+}
