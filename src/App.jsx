@@ -26,6 +26,7 @@ const units = [
       { name: "2.3 Instantaneous Velocity", href: "./unitLessons/index.html#/P2_3instantaneousVelocity?view=overview", password: "phys23" },
       { name: "2.4 Average Acceleration", href: "./unitLessons/index.html#/P2_4averageAcceleration?view=overview", password: "phys24"},
       { name: "2.5 Uniform (Constant) Acceleration", href: "./unitLessons/index.html#/P2_5uniformAcceleration?view=overview", password: "phys25" },
+      { name: "2.6 Displacement with Constant Acceleration", href: "./unitLessons/index.html#/P2_6displacementConstAccel?view=overview", password: "phys26" }
     ]
   },
 
