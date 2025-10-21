@@ -22,7 +22,7 @@ const units = [
     id: 2,
     title: "Unit 2 — Motion in One Dimension",
     items: [
-      { name: "2.1–2.2 Position, Distance, Displacement & Avg Velocity", href: "./unitLessons/index.html#/P2_1_2positionVelocity?view=overview", password: "phys2122"},
+      { name: "2.1–2.2 Position, Distance, Displacement & Avg Velocity", href: "./unitLessons/index.html#/P2_1_2positionVelocity?view=overview", password: ""},
       { name: "2.3 Instantaneous Velocity", href: "./unitLessons/index.html#/P2_3instantaneousVelocity?view=overview", password: "phys23" },
       { name: "2.4 Average Acceleration", href: "./unitLessons/index.html#/P2_4averageAcceleration?view=overview", password: "phys24"},
       { name: "2.5 Uniform (Constant) Acceleration", href: "./unitLessons/index.html#/P2_5uniformAcceleration?view=overview", password: "phys25" },
